@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Week6</title>
+    <script>
+        async function signup() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const respond = await fetch("http://localhost:3000/signup",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json' // Set headers
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            });
+            const data = await respond.json();
+
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+
+            alert(data.status);
+        }
+
+        async function signin() {
+            const username = document.getElementById("username2").value;
+            const password = document.getElementById("password2").value;
+
+            const respond = await fetch('http://localhost:3000/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                }) 
+            })
+            const data = await respond.json();
+
+            localStorage.setItem('token', data.token);
+
+            document.getElementById("username2").value = "";
+            document.getElementById("password2").value = "";
+
+            alert(JSON.stringify(data));
+
+        }
+
+        async function init() {
+            const respond = await fetch('http://localhost:3000/me', {
+                headers: {
+                    token: localStorage.getItem("token")
+                }
+            })
+            const data = await respond.json();
+
+
+            document.getElementById("information").innerText = `username: ${data.username} password ${data.password}`;
+        }
+        init();
+    </script>
+</head>
+<body>
+    <div>
+        <div>Signup</div>
+        <input id="username" type="text">
+        <input id="password" type="password">
+        <div><button onclick="signup()">Signup</button></div>
+    </div>
+    <div>
+        <div>Signin</div>
+        <input type="text" name="" id="username2">
+        <input type="password" name="" id="password2">
+        <div><button onclick="signin()">Signin</button></div>
+    </div>
+    <div>Information</div>
+    <div id="information"></div>
+
+</body>
+</html>
