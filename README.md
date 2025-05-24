@@ -13,7 +13,7 @@
 | Week4.2 | HTTP Protocol, Request Response model, Domain name/IP, Ports, Methods, Response, Status codes (200,300,400,500 series), Body (payload), Routes, Headers, Postman, Express      |
 | Week5.1 | Fetch API, Axios library, Create HTTP server       |
 | Week5.2 | Commonly used middlewares (express.json & CORS)       |
-| Week6.1 | Auth basics, Auth workflow, Creating an authenticated EP with random generate token, Tokens vs JWTs, auth middleware, Create FE       |
+| Week6.1 | Auth basics, Auth workflow, Creating an authenticated EP with random generate token, Tokens vs JWTs       |
 | Week6.2 |  auth middleware, Create FE       |
 | Week7.1 |  databases, MongoDB and NoSQL Properties, Connection string, CRUD operations, mongoose to define shcema, model       |
 | Week7.2 |  password hashing using bcrypt, salt, error handling(try-catch), input validation with zod        |
