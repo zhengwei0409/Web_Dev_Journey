@@ -1,4 +1,4 @@
-# Road to FAANG ➡️
+# Road to MAANG ➡️
 
 | Week   | Description |
 | -------- | ------- |
