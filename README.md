@@ -1,4 +1,4 @@
-# Learning codes for web development
+# Road to FAANG ➡️
 
 | Week   | Description |
 | -------- | ------- |
@@ -17,3 +17,5 @@
 | Week6.2 |  auth middleware, Create FE       |
 | Week7.1 |  databases, MongoDB and NoSQL Properties, Connection string, CRUD operations, mongoose to define shcema, model       |
 | Week7.2 |  password hashing using bcrypt, salt, error handling(try-catch), input validation with zod        |
+| Week8.1 |  express router, course selling app backend 1        |
+| Week8.2 |  nodemon, different JWT_SECRET for admin and user, circular dependency, .env, course selling app backend 2        |

@@ -75,7 +75,7 @@ app.post('/login', async function(req,res) {
         return;
     } 
 
-    const passwordMatch = bcrypt.compare(password, response.password);
+    const passwordMatch = await bcrypt.compare(password, response.password);
 
     if(passwordMatch) {
         const token = jwt.sign({
