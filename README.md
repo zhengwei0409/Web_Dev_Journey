@@ -20,6 +20,9 @@
 | Week8.1 |  express router, course selling app backend 1        |
 | Week8.2 |  nodemon, different JWT_SECRET for admin and user, circular dependency, .env, course selling app backend 2        |
 | Week9.1 |  state, component, rerendering       |
-| Week9.2 |  vite, useState(), side effects, useEffect(), props, conditional rendering       |
+| Week9.2 |  vite, useState(), side effects, useEffect(), mounting and unmounting, props, conditional rendering       |
+| Week9.3 |  children props, list and key prop, inline styling, class based vs functional components, lifecycle events, error boudary, fragment        |
+| Week10.1 |  Single Page Applications (SPAs), react-router-dom, layouts, <Link to="">, <Outlet />, useRef()         |
+| Week10.2 |  Rolling up the state, Prop drilling, context API, Context, Provider, Consumer (useContext hook)        |
 
  
