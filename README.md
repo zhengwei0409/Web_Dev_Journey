@@ -4,7 +4,7 @@
 | -------- | ------- |
 | Week1.1  | Orientation, VSCode Installation, HTML, CSS    |
 | Week1.2 | Bascis of JS (Properties, Syntax, Objects, Arrays)     |
-| Week2.1    | Synchronous vs Asynchronous, setTimeout, callbacks, Call Stack, web APIs, Callback Queue, Event Loop    |
+| Week2.1    | Synchronous vs Asynchronous, fs.readFile, setTimeout, callbacks, Call Stack, web APIs, Callback Queue, Event Loop    |
 | Week2.2    | Classes, Constructor, Methods, Inheritance, Getters and Setters, Static Methods, new Date(), new Map(), Promise class, Callback version vs Promisified version, Callback hell, async await syntax, err first callback vs rejects in promises     |
 | Week2.3 | Bash and Terminals (pwd,cdc,ls,mkdir,touch,cat,vi,mv)     |
 | Week3.1 | Static vs Dynamic HTML, Fetching, Updating, Deleting and Adding elements      |
@@ -19,4 +19,7 @@
 | Week7.2 |  password hashing using bcrypt, salt, error handling(try-catch), input validation with zod        |
 | Week8.1 |  express router, course selling app backend 1        |
 | Week8.2 |  nodemon, different JWT_SECRET for admin and user, circular dependency, .env, course selling app backend 2        |
+| Week9.1 |  state, component, rerendering       |
+| Week9.2 |  vite, useState(), side effects, useEffect(), props, conditional rendering       |
 
+ 
