@@ -24,5 +24,6 @@
 | Week9.3 |  children props, list and key prop, inline styling, class based vs functional components, lifecycle events, error boudary, fragment        |
 | Week10.1 |  Single Page Applications (SPAs), react-router-dom, layouts, Link to="", Outlet, useRef()         |
 | Week10.2 |  Rolling up the state, Prop drilling, context API, Context, Provider, Consumer (useContext hook)        |
-
- 
+| Week11.1 |  Custom hooks, useFetch(), usePrev(), useDebounce,            |
+| Week11.2 |  Recoil vs Context API, Atom, memo(), Selector               |
+| Week12.1 |  Tygraphy, Colors, User Interface(UI), User Experience(UX), Whitespce, Taking References, Design System (Material Design/Apple's Human Interface Guidelines), Responsive Design (Mobile-Frist Approach/Desktop-First Approach), Tailwind CSS Color Generator (Plugin), Auto Layout,  Layoud Grid (Colums)              |
