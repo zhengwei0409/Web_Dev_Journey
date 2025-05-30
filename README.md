@@ -22,8 +22,12 @@
 | Week9.1 |  state, component, rerendering       |
 | Week9.2 |  vite, useState(), side effects, useEffect(), mounting and unmounting, props, conditional rendering       |
 | Week9.3 |  children props, list and key prop, inline styling, class based vs functional components, lifecycle events, error boudary, fragment        |
-| Week10.1 |  Single Page Applications (SPAs), react-router-dom, layouts, Link to="", Outlet, useRef()         |
+| Week10.1 |  Single Page Applications (SPAs), react-router-dom, layouts, Link to="", Outlet, navigate(), useRef()         |
 | Week10.2 |  Rolling up the state, Prop drilling, context API, Context, Provider, Consumer (useContext hook)        |
 | Week11.1 |  Custom hooks, useFetch(), usePrev(), useDebounce,            |
 | Week11.2 |  Recoil vs Context API, Atom, memo(), Selector               |
-| Week12.1 |  Tygraphy, Colors, User Interface(UI), User Experience(UX), Whitespce, Taking References, Design System (Material Design/Apple's Human Interface Guidelines), Responsive Design (Mobile-Frist Approach/Desktop-First Approach), Tailwind CSS Color Generator (Plugin), Auto Layout,  Layoud Grid (Colums)              |
+| Week12.1 |  Tygraphy, Colors, User Interface(UI), User Experience(UX), Whitespce, Taking References, Design System (Material Design/Apple's Human Interface Guidelines), Responsive Design (Mobile-Frist Approach/Desktop-First Approach), Tailwind CSS Color Generator (Plugin), Auto Layout,  Layout Grid (Colums)              |
+| Week12.2 |  Flexbox and Grid, basic Tailwind, Walkthrough UI codabase              |
+| Week13.1 |  Tailwind, Ref Arrays (OTP)           |
+| Week13.2 |  SideBar, Responsive Design, Breakpoint              |
+| Week14.1 |  Strongly typed vs loosy typed, typescript, tsc compiler, basic types in Typescript, tsconfig (target, rootDor, outDir, noImplicitAny, removeComments)               |
