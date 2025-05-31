@@ -31,3 +31,5 @@
 | Week13.1 |  Tailwind, Ref Arrays (OTP)           |
 | Week13.2 |  SideBar, Responsive Design, Breakpoint              |
 | Week14.1 |  Strongly typed vs loosy typed, typescript, tsc compiler, basic types in Typescript, tsconfig (target, rootDor, outDir, noImplicitAny, removeComments)               |
+| Week14.2 |  Interfaces, Implementing interfaces, Abstract class, extends class, TypeOptional fields(?) , type, unions, intersection, type vs interface, arrays in ts, function in ts, enums, generics, ES modules               |
+| Week14.3 |  Pick< ,'' | ''>, Partial<>,  readonly, Record< , >, new Map< , >(), Exclude< , ''>, Type inference in zod        |
