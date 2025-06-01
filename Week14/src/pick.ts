@@ -51,6 +51,12 @@ const usersAge : UserAge = {
     "ras@qd1" : 423
 }
 
+// console.log(usersAge.ras@qd1)
+console.log(usersAge["ras@qd1"]); // ✅ Works
+// Use dot notation for simple keys (like usersAge.name) and 
+// bracket notation for any key that has special characters, spaces, or starts with a number.
+
+
 // or 
 
 type UsersAge2 = Record<string,number>
@@ -60,3 +66,21 @@ const usersAge2 : UserAge = {
 }
 
 
+// In JavaScript (and TypeScript, since it compiles to JS), 
+// object keys are always strings (or symbols), even if you write a number.
+
+// new Map<string,number>()
+// .set(,)
+// .get()
+// .delete()
+
+// exclude
+type EventType = 'click' | 'scroll' | 'mousemove'
+type ExcludeEvent = Exclude<EventType, 'scroll'>
+
+const handleEvent = (event: ExcludeEvent) => {
+    console.log('Handling event: ' + event);
+}
+
+handleEvent('click');
+// handleEvent('scroll')

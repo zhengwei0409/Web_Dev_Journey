@@ -70,9 +70,20 @@
 // console.log(newArr);
 
 // Question 12
-async function foo() {
-    return 'Hello World'
-}
-const result = foo();
-console.log(result)
-result.then((i) => console.log(i))
+// async function foo() {
+//     return 'Hello World'
+// }
+// const result = foo();
+// console.log(result)
+// result.then((i) => console.log(i))
+
+// Question 13
+// console.log(NaN == NaN);
+// console.log(NaN === NaN);
+
+// Question 14
+// console.log(1<2<3);
+// console.log(3>2>1);
+
+// In JS, true is coerced to 1 (type coercion)
+
