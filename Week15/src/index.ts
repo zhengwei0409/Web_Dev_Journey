@@ -4,6 +4,8 @@ import { z } from 'zod';
 import bycript from 'bcrypt';
 import 'dotenv/config';
 import jwt from 'jsonwebtoken'
+import mongoose from 'mongoose';
+import { loginVarification } from './middleware';
 
 const app = express();
 
@@ -95,19 +97,45 @@ app.post('/api/v1/signin', async (req,res) => {
     }
 })
 
-app.post('/api/v1/content')
+app.post('/api/v1/content',loginVarification, (req,res) => {
+    
+})
 
-app.get('/api/v1/content')
+app.get('/api/v1/content',loginVarification, (req,res) => {
 
-app.delete('/api/v1/content')
+})
 
-app.post('/api/v1/brain/share')
+app.delete('/api/v1/content',loginVarification, (req,res) => {
 
-app.get('/api/v1/brain/:shareLink')
+})
 
-function main() {
-    // connect mongoose
-    app.listen(3000);
+app.post('/api/v1/brain/share',loginVarification, (req,res) => {
+
+})
+
+app.get('/api/v1/brain/:shareLink', (req,res) => {
+
+})
+
+async function main() {
+
+    const MONGO_URL = process.env.MONGO_URL;
+
+    if(!MONGO_URL) {
+        console.log('mongo connection string is missing');
+        process.exit(1);
+    }
+
+    try {
+        await mongoose.connect(MONGO_URL);
+        app.listen(3000, () => {
+            console.log('Server started at port 3000')
+        });
+    } catch(e) {
+        console.log(e);
+        process.exit(1);
+    }
+    
 }
 
-main()
+main();
