@@ -87,3 +87,50 @@
 
 // In JS, true is coerced to 1 (type coercion)
 
+// Question 15
+// function x() {
+//     for(var i = 1; i<=5; i++) {
+//         setTimeout(() => {
+//             console.log(i)
+//         }, i*1000)
+//     }
+// }
+
+// x()
+
+// Question 15
+// function x() {
+//     for(var i = 1; i<=5; i++) {
+//         function y(i) {
+//             setTimeout(() => {
+//                 console.log(i)
+//             }, i*1000)
+//         }
+//         y(i)
+//     }
+// }
+
+// x()
+
+// Question 16
+// let x = 6;
+// {
+//     let x = 5;
+//     console.log(x);
+// }
+// console.log(x)
+
+// Question 17
+// var x = 6;
+// {
+//     var x = 5;
+//     console.log(x);
+// }
+// console.log(x)
+
+// Question 17
+// function xyz() {
+//     this.i = 5;
+// }
+// const x = new xyz()
+// console.log(x.i)
