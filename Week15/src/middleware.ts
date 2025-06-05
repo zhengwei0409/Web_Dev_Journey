@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 
 interface CustomRequest extends Request {
     id?: string;
@@ -21,7 +21,7 @@ export function loginVarification(req: CustomRequest, res: Response, next: NextF
     
 
     if(verification) {
-        req.id = verification.indexOf;
+        req.id = (verification as JwtPayload).id; // Explicit Type Assertions
         next();
     } else {
         res.status(403).json({

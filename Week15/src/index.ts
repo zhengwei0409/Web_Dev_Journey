@@ -1,11 +1,16 @@
-import express from 'express';
-import { UserModel } from './db';
+import express, { json } from 'express';
+import { ContentModel, LinkModel, UserModel } from './db';
 import { z } from 'zod';
 import bycript from 'bcrypt';
 import 'dotenv/config';
 import jwt from 'jsonwebtoken'
 import mongoose from 'mongoose';
 import { loginVarification } from './middleware';
+import { Request } from "express";
+
+interface CustomRequest extends Request {
+    id?: string;
+}
 
 const app = express();
 
@@ -97,24 +102,117 @@ app.post('/api/v1/signin', async (req,res) => {
     }
 })
 
-app.post('/api/v1/content',loginVarification, (req,res) => {
+app.post('/api/v1/content',loginVarification, async (req : CustomRequest,res) => {
+    const { title, link } = req.body;
+
+    try{
+        await ContentModel.create({
+            title,
+            link,
+            tags: [],
+            userId: req.id
+        })
+
+        res.status(200).json({
+            status: 'content created'
+        })
     
-})
-
-app.get('/api/v1/content',loginVarification, (req,res) => {
-
-})
-
-app.delete('/api/v1/content',loginVarification, (req,res) => {
+    } catch(e) {
+        res.status(400).json({
+            status: 'create content fail'
+        })
+    }
 
 })
 
-app.post('/api/v1/brain/share',loginVarification, (req,res) => {
+app.get('/api/v1/content',loginVarification, async (req : CustomRequest,res) => {
+    const userId = req.id;
+    
+    try {
+        const content = await ContentModel.find({
+            userId: userId
+        }).populate('userId', 'username');
+
+        res.status(200).json({
+            content
+        })
+    } catch(e) {
+        res.status(400).json({
+            status: "content not found"
+        })
+    }
+})
+
+app.delete('/api/v1/content',loginVarification, async (req : CustomRequest,res) => {
+    const contId = req.body.contentId;
+
+    try{
+        await ContentModel.deleteOne({
+            _id: contId,
+            userId: req.id
+        })
+
+        res.status(200).json({
+            status: 'Delete Successfully'
+        })
+    } catch(e) {
+        res.status(401).json({
+            status: "Delete fail"
+        })
+    }
+})
+
+app.post('/api/v1/brain/share',loginVarification, async (req : CustomRequest,res) => {
+    const {share} = req.body;
+
+    if(share) {
+        
+        const existingLink = await LinkModel.findOne({
+            userId: req.id
+        })
+
+        if(existingLink) {
+            res.status(200).json({
+                hash: existingLink
+            })
+            return
+        } 
+
+        const hash = random(10);
+
+        await LinkModel.create({hash, userId: req.id});
+
+        res.status(200).json({
+            hash
+        })
+
+    } else {
+        res.status(401).json({
+            status: 'Share Fail'
+        })
+        return
+    }
 
 })
 
-app.get('/api/v1/brain/:shareLink', (req,res) => {
+app.get('/api/v1/brain/:shareLink', async (req,res) => {
+    const hash = req.params.shareLink;
 
+    const link = await LinkModel.findOne({hash});
+    if(!link) {
+        res.status(404).json({
+            status: "Invalid Share Link"
+        });
+        return;
+    }
+
+    const content = await ContentModel.find({
+        userId: link.userId
+    });
+
+    res.status(200).json({
+        content
+    });
 })
 
 async function main() {
@@ -139,3 +237,16 @@ async function main() {
 }
 
 main();
+
+function random(len: number) {
+    let options = 'erdctfbghujmrdtfbghunjmrxctfvygbhun';
+    let length = options.length;
+
+    let ans = "";
+
+    for(let i = 0; i < len; i++) {
+        ans += options[Math.floor(Math.random() * length)];
+    }
+
+    return ans;
+}
