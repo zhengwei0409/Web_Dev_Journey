@@ -34,3 +34,6 @@
 | Week14.2 |  Interfaces, Implementing interfaces, Abstract class, extends class, TypeOptional fields(?) , type, unions, intersection, type vs interface, arrays in ts, function in ts, enums, generics, ES modules               |
 | Week14.3 |  Pick< ,''>, Partial<>,  readonly, Record< , >, new Map< , >(), Exclude< , ''>, Type inference in zod        |
 | Week15.1 |  Backend for Brainly using Typescript        |
+| Week15.2 |  Creating A UI Library and Button Component         |
+| Week15.3 |  Complete Brainly End To End         |
+

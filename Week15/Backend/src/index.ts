@@ -7,6 +7,9 @@ import jwt from 'jsonwebtoken'
 import mongoose from 'mongoose';
 import { loginVarification } from './middleware';
 import { Request } from "express";
+import cors from 'cors';
+
+
 
 interface CustomRequest extends Request {
     id?: string;
@@ -14,6 +17,8 @@ interface CustomRequest extends Request {
 
 const app = express();
 
+
+app.use(cors());
 app.use(express.json());
 
 app.post('/api/v1/signup', async (req ,res) => {
@@ -103,12 +108,13 @@ app.post('/api/v1/signin', async (req,res) => {
 })
 
 app.post('/api/v1/content',loginVarification, async (req : CustomRequest,res) => {
-    const { title, link } = req.body;
+    const { title, link, type } = req.body;
 
     try{
         await ContentModel.create({
             title,
             link,
+            type,
             tags: [],
             userId: req.id
         })
