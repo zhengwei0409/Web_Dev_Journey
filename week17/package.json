@@ -1,0 +1,17 @@
+{
+  "name": "week17",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -b && node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/pg": "^8.15.4",
+    "pg": "^8.16.0",
+    "typescript": "^5.8.3"
+  }
+}
