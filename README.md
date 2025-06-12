@@ -37,5 +37,5 @@
 | Week15.2 |  Creating A UI Library and Button Component         |
 | Week15.3 |  Complete Brainly End To End         |
 | Week16.1 |  TCP (3-way handshake), WebSockets, WebSockets libraries in Node.js (ws, socket.io),  Server side and Client side WebSocket, Scaling ws servers (Pub Sub)        |
-| Week16.1 |  End to End Chat App using WebSocket       |
+| Week16.2 |  End to End Chat App using WebSocket       |
 
