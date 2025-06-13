@@ -39,3 +39,4 @@
 | Week16.1 |  TCP (3-way handshake), WebSockets, WebSockets libraries in Node.js (ws, socket.io),  Server side and Client side WebSocket, Scaling ws servers (Pub Sub)        |
 | Week16.2 |  End to End Chat App using WebSocket       |
 | Week17.1 |  Types of Databases, Why not NoSQL, strict schema, neon.tech, postgreSQL Connnection String, psql (terminal), pg (Node.js), SERIAL, CRUD operations, SQL Injection         |
+| Week17.2 |  Relationships in DB (Foreign key constraints),  Transaction in SQL (Begin; Commit;), Joins (Inner Join, Left Join, Right Join, Full Join)          |
