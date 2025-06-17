@@ -13,4 +13,4 @@ async function main() {
     console.log(respoonse2.rows);
 }
 
-main();
+main() ;

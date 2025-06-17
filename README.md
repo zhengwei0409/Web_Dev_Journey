@@ -40,3 +40,4 @@
 | Week16.2 |  End to End Chat App using WebSocket       |
 | Week17.1 |  Types of Databases, Why not NoSQL, strict schema, neon.tech, postgreSQL Connnection String, psql (terminal), pg (Node.js), SERIAL, CRUD operations, SQL Injection         |
 | Week17.2 |  Relationships in DB (Foreign key constraints),  Transaction in SQL (Begin; Commit;), Joins (Inner Join, Left Join, Right Join, Full Join)          |
+| Week18.1 |  Prisma (Data Model, Automated Migrations, Type Safety, Auto-Completion), Generating prisma clients, CRUD operations using Prisma           |

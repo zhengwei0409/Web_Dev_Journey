@@ -134,3 +134,8 @@
 // }
 // const x = new xyz()
 // console.log(x.i)
+
+const expensive = () => {
+    console.log("Expensive");
+}
+ 
